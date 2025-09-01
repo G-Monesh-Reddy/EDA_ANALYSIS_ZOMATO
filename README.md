@@ -1,78 +1,106 @@
-🍴 Zomato Data Analysis – Exploratory Data Analysis (EDA)
-📌 Project Overview
+# 🍴 Zomato Restaurants – Exploratory Data Analysis (EDA)
 
-The Zomato dataset provides restaurant-related information such as cuisines, locations, ratings, and pricing.
-This project applies Exploratory Data Analysis (EDA) to uncover:
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Pandas](https://img.shields.io/badge/Library-Pandas-orange)
+![Matplotlib](https://img.shields.io/badge/Visualization-Matplotlib-green)
+![Seaborn](https://img.shields.io/badge/Visualization-Seaborn-purple)
+![Jupyter](https://img.shields.io/badge/Notebook-Jupyter-lightgrey)
 
-Which cuisines and locations dominate the food industry.
+---
 
-How price range impacts customer ratings and popularity.
+## 📌 Project Overview
 
-Which factors drive customer preferences across cities.
+The **Zomato Restaurants Dataset** (Bangalore) contains **42K+ restaurant records**.
+This project applies **Exploratory Data Analysis (EDA)** to uncover:
 
-Correlations between restaurant features and customer ratings.
+* Which **restaurant types and locations** dominate the market
+* How **pricing trends** affect affordability
+* Adoption of **table booking and online ordering** services
+* Geographic **distribution of food hubs** in Bangalore
 
-📊 Dataset Information
+---
 
-Source: Zomato Dataset (Kaggle/Open Source)
-Records: ~50K+ restaurant entries
-Features:
+## 📊 Dataset Information
 
-🏙️ Location → City, Locality
+* **Source**: Zomato Restaurant Listings (Bangalore)
+* **Records**: \~42,700
+* **Features**:
 
-🍽️ Restaurant Info → Name, Cuisine, Cost for Two, Online Order, Table Booking
+  * 🧑 Restaurant Info → `Name`, `Type`, `Location`, `Rating`
+  * 📦 Services → `Table_Booking`, `Online_Order`
+  * 💰 Pricing → `Approx_Cost(for two people)`
 
-⭐ Ratings → Aggregate ratings, Votes, Review counts
+---
 
-🔍 Methodology
+## 🔍 Methodology
 
-Data Cleaning & Preprocessing → handled missing values, standardized categorical variables, and removed duplicates.
+1. Data Cleaning → handled missing values, standardized categories
+2. Univariate Analysis → restaurant type counts, cost distribution
+3. Bivariate Analysis → table booking & ordering behavior
+4. Location Analysis → high-density food hubs
+5. Distribution Study → affordability and adoption trends
 
-Univariate Analysis → explored distribution of cuisines, cost for two, and rating categories.
+---
 
-Bivariate Analysis → analyzed relationships between cost, ratings, cuisines, and location-based preferences.
+## 📈 Key Findings
 
-Top-N Analysis → identified most popular cuisines, localities, and restaurants.
+### 🍽️ Restaurant Types
 
-Correlation Study → examined associations between features and ratings.
+* **Quick Bites (14K)** and **Casual Dining (12K)** dominate
+* Together ≈ **61% of listings (\~26K of 42.7K)**
 
-📈 Key Findings
+### 🪑 Table Booking Availability
 
-🌍 Popular Locations: Certain localities dominate restaurant density and customer choices.
+* Split nearly half: **Yes \~49% (20.9K)** vs. **No \~51% (21.8K)**
+* Suggests balanced adoption of reservations
 
-🍛 Cuisine Trends: North Indian and Chinese are the most common cuisines across cities.
+### 📦 Online Ordering
 
-💰 Cost Insights: Higher “Cost for Two” does not always correlate with better ratings.
+* **13.6K restaurants (\~32%)** enable online ordering
+* Shows strong but not universal adoption
 
-⭐ Customer Ratings: Majority of restaurants fall in the average rating category, with only a small fraction rated above 4.5.
+### 📍 Top Locations
 
-📦 Online Ordering: Restaurants offering online ordering and table booking options generally attract more customers.
+* High-density hubs: **Lavelle Road, Church Street, Koramangala (3rd Block), Rajarajeshwari Nagar, Sankey Road, BTM, Whitefield, Yeshwantpur**
+* Counts **600–800 per location**, clusters reaching \~4,000
 
-📊 Visual Gallery
+### 💰 Cost for Two Distribution
+
+* Prices range up to **₹6,000**, but majority **< ₹2,000**
+* Peak affordability density ≈ **₹1,000–₹1,500**
+
+### 🧭 Additional Observations
+
+* Location plots show varying **scales of raw vs. aggregated counts**
+* **Overlapping labels** → recommend horizontal or grouped bar charts
+
+---
+
+## 📊 Visual Gallery
 
 The notebook generates:
 
-Cuisine-wise restaurant distribution plots.
+* **Bar plots** for restaurant types, booking, and ordering
+* **Location distribution charts**
+* **Histograms & density plots** for pricing
+* **Aggregated views** of top localities
 
-Location-based restaurant availability heatmaps.
+---
 
-Rating vs Cost distribution scatterplots.
+## 🛠️ Tech Stack
+- **Python** → Pandas, NumPy  
+- **Visualization** → Matplotlib, Seaborn  
+- **Environment** → Jupyter Notebook 
 
-Correlation heatmap of numeric features.
+---
 
-Top cuisines & top localities charts.
+---
 
-🛠️ Tech Stack
-
-Python → Pandas, NumPy
-
-Visualization → Matplotlib, Seaborn
-
-Environment → Jupyter Notebook
-
-⚙️ Installation & Usage
+## ⚙️ Installation & Usage
 
 Clone the repository:
-
+```bash
 git clone https://github.com/G-Monesh-Reddy/EDA_ANALYSIS_ZOMATO.git
-cd EDA_ANALYSIS_ZOMATO
+---
+
+## 📂 Repository Structure
